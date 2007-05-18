@@ -1,7 +1,8 @@
 Name:		unrtf
-Version: 0.19.3
-Release:	%mkrel 3
-Source0:	http://www.gnu.org/software/unrtf/unrtf-%{version}.tar.bz2
+Version:	0.20.2
+Release:	%mkrel 1
+Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz
+Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz.sig
 URL:		http://www.gnu.org/software/unrtf/unrtf.html
 License:	GPL
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -16,19 +17,19 @@ hyperlinks, paragraph alignment among other things. All other
 conversions are "alpha"--just begun.
 
 %prep
-%setup -q
+%setup -q -n %{name}_%{version}
 
 %build
-%make CFLAGS="%optflags"
+%configure
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
-install -D %{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
+%makeinstall
 
 %files
 %defattr(-, root, root)
-%doc README CHANGES doc/unrtf.html
+%doc AUTHORS README NEWS
 %{_mandir}/man1/%{name}.1*
 %{_bindir}/%{name}
 
