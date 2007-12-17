@@ -5,7 +5,6 @@ Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz
 Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz.sig
 URL:		http://www.gnu.org/software/unrtf/unrtf.html
 License:	GPL
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Summary:	RTF to other formats converter
 Group:		Text tools
 
