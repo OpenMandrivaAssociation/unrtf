@@ -1,5 +1,5 @@
 Name:		unrtf
-Version:	0.20.4
+Version:	0.20.2
 Release:	%mkrel 2
 Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz
 Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz.sig
@@ -35,5 +35,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-
