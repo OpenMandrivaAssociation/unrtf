@@ -1,8 +1,8 @@
 Name:		unrtf
-Version:	0.20.2
-Release:	%mkrel 3
-Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz
-Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf_%{version}.tar.gz.sig
+Version:	0.21.0
+Release:	%mkrel 1
+Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz
+Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz.sig
 URL:		http://www.gnu.org/software/unrtf/unrtf.html
 License:	GPL
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -12,12 +12,12 @@ Group:		Text tools
 %description
 UnRTF is a moderately complicated converter from RTF to other
 formats, including HTML, LaTeX, text, and PostScript. Converting
-to HTML, it supports tables, fonts, colors, embedded images, 
+to HTML, it supports tables, fonts, colors, embedded images,
 hyperlinks, paragraph alignment among other things. All other
 conversions are "alpha"--just begun.
 
 %prep
-%setup -q -n %{name}_%{version}
+%setup -q -n %{name}-%{version}
 
 %build
 %configure
@@ -32,6 +32,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README NEWS
 %{_mandir}/man1/%{name}.1*
 %{_bindir}/%{name}
+%{_libdir}/%{name}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
