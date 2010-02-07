@@ -1,6 +1,6 @@
 Name:		unrtf
 Version:	0.21.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz
 Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz.sig
 URL:		http://www.gnu.org/software/unrtf/unrtf.html
@@ -18,7 +18,7 @@ conversions are "alpha"--just begun.
 
 %prep
 %setup -q -n %{name}-%{version}
-sed -i -e 's#/usr/local/lib/unrtf/#%{_libdir}/unrtf#' src/main.h
+sed -i -e 's#/usr/local/lib/unrtf/#%{_libdir}/unrtf/#' src/main.h
 
 %build
 %configure2_5x
