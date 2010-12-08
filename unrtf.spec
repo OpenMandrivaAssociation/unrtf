@@ -1,6 +1,6 @@
 Name:		unrtf
 Version:	0.21.1
-Release:	%mkrel 4
+Release:	%mkrel 5
 Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz
 Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz.sig
 URL:		http://www.gnu.org/software/unrtf/unrtf.html
