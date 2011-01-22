@@ -1,11 +1,11 @@
 Name:		unrtf
 Version:	0.21.1
-Release:	%mkrel 5
+Release:	%mkrel 6
 Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz
 Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz.sig
 URL:		http://www.gnu.org/software/unrtf/unrtf.html
 License:	GPL
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
+Buildroot:	%{_tmppath}/%{name}-%{version}
 Summary:	RTF to other formats converter
 Group:		Text tools
 
@@ -18,22 +18,23 @@ conversions are "alpha"--just begun.
 
 %prep
 %setup -q -n %{name}-%{version}
-sed -i -e 's#/usr/local/lib/unrtf/#%{_libdir}/unrtf/#' src/main.h
+sed -i -e 's#/usr/local/lib/unrtf/#%{_datadir}/unrtf/#' src/main.h
 
 %build
 %configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
+mv %{buildroot}/%{_libdir}/%{name} %{buildroot}/%{_datadir}/
 
 %files
 %defattr(-, root, root)
 %doc AUTHORS README NEWS
 %{_mandir}/man1/%{name}.1*
 %{_bindir}/%{name}
-%{_libdir}/%{name}/*
+%{_datadir}/%{name}/*
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
