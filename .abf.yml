@@ -1,2 +1,5 @@
+removed_sources:
+  unrtf-0.21.2.tar.gz: 207614a8dccc1334ae124a1734eabf3893602802
 sources:
-  "unrtf-0.21.2.tar.gz": 207614a8dccc1334ae124a1734eabf3893602802
+  unrtf-0.21.9.tar.gz: a00069bc4bfdcf80e55a0b33a8a3d52e47574f67
+  unrtf-0.21.9.tar.gz.sig: 034a150e55637df2d0f3b0d62cb2285effb61fa5
