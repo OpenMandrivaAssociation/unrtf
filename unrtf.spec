@@ -3,7 +3,7 @@ Version:	0.21.10
 Release:	1
 Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz
 Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz.sig
-URL:		http://www.gnu.org/software/unrtf/unrtf.html
+URL:		https://www.gnu.org/software/unrtf/unrtf.html
 License:	GPLv3
 Summary:	RTF to other formats converter
 Group:		Text tools
