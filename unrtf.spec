@@ -8,6 +8,11 @@ License:	GPLv3
 Summary:	RTF to other formats converter
 Group:		Text tools
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 UnRTF is a moderately complicated converter from RTF to other
 formats, including HTML, LaTeX, text, and PostScript. Converting
