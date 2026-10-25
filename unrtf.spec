@@ -1,5 +1,5 @@
 Name:		unrtf
-Version:	0.21.10
+Version:	0.21.13
 Release:	1
 Source0:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz
 Source1:	http://ftp.gnu.org/gnu/unrtf/unrtf-%{version}.tar.gz.sig
